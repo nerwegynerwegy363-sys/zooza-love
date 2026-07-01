@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>❤️ زوزا & نونتي ❤️</title>
 
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Tahoma,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ffffff,#ffd6e7);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+}
+
+.card{
+background:#fff;
+padding:30px;
+border-radius:20px;
+text-align:center;
+width:90%;
+max-width:500px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+h1{
+color:#ff2d75;
+margin-bottom:20px;
+}
+
+p{
+font-size:20px;
+line-height:2;
+color:#444;
+margin-bottom:20px;
+}
+
+button{
+background:#ff2d75;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:12px;
+font-size:18px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff4f8f;
+}
+
+.heart{
+position:fixed;
+top:-20px;
+font-size:24px;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h1>❤️ زوزا & نونتي ❤️</h1>
+
+<p>
+إلى أجمل بنت في الدنيا كلها ❤️🌍<br><br>
+بحبك أكتر من أي كلام يوصف،
+وكل يوم بيمر وأنا معاكي بحمد ربنا عليه.
+وجودك في حياتي هو أجمل نعمة،
+وربنا يديم ضحكتك في حياتي يا زوزتي. 💖
+</p>
+
+<button onclick="alert('بحبك يا زوزا جدًا ❤️')">
+اضغطي هنا 🤍
+</button>
+
+</div>
+
+<script>
+setInterval(()=>{
+const h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.animationDuration=(Math.random()*3+3)+"s";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),6000);
+},300);
+</script>
+
+</body>
+</html>
